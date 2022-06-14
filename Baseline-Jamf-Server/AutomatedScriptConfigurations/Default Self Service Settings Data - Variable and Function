@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Created 5.23.2022 @robjschroeder
+
+# Self Service settings data
+selfServiceData=$(cat <<EOF
+{
+			"installSettings": {
+					"installAutomatically": true,
+					"installLocation": "/Applications"
+			},
+			"loginSettings": {
+					"allowRememberMe": false,
+					"userLoginLevel": "NotRequired",
+					"authType": "Basic"
+			},
+			"configurationSettings": {
+					"notificationsEnabled": false,
+					"alertUserApprovedMdm": true,
+					"defaultLandingPage": "HOME",
+					"defaultHomeCategoryId": -1,
+					"bookmarksName": "Bookmarks"
+			}
+}
+EOF
+)
+
+# Update Self Service Settings
+updateSelfService(){
+	curl --request PUT \
+	--url ${jamfProURL}/api/v1/self-service/settings \
+	--header 'Accept: application/json' \
+	--header 'Content-Type: application/json' \
+	--header "Authorization: Bearer ${token}" \
+	--data "${selfServiceData}"
+}

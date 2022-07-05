@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <script>
-    <id>2</id>
     <name>Enrollment - Start DEPNotify</name>
     <category>Enrollment</category>
     <filename>Enrollment - Start DEPNotify</filename>

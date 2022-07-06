@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <computer_group>
-    <id>17</id>
     <name>App Needs Update - Google Chrome</name>
     <is_smart>true</is_smart>
     <site>
@@ -19,7 +18,4 @@
             <closing_paren>false</closing_paren>
         </criterion>
     </criteria>
-    <computers>
-        <size>0</size>
-    </computers>
 </computer_group>

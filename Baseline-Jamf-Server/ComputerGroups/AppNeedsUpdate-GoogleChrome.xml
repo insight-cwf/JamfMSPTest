@@ -13,7 +13,7 @@
             <priority>0</priority>
             <and_or>and</and_or>
             <search_type>less than</search_type>
-            <value>Latest Version</value>
+            <value>103.0.5060.114</value>
             <opening_paren>false</opening_paren>
             <closing_paren>false</closing_paren>
         </criterion>

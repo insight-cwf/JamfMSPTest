@@ -15,24 +15,7 @@ if [ $lastUser == "" ]; then
 else
 	echo "&lt;result&gt;$lastUser&lt;/result&gt;"
 fi</script>
-    </input_type>
-    <input_type>
-        <type>script</type>
-        <platform>Windows</platform>
-        <scripting_language>VBScript</scripting_language>
-        <script>On Error Resume Next
-
-Dim objComputers
-Dim strComputers
-
-Set objComputers= GetObject("winmgmts:").Instancesof("Win32_ComputerSystem")
-
-For each Computer in objComputers
-strComputers = Computer.UserName
-Next
-
-WScript.Echo "&lt;result&gt;" &amp; strComputers &amp; "&lt;/result&gt;"</script>
-    </input_type>
+	</input_type>
     <inventory_display>Extension Attributes</inventory_display>
     <recon_display>Extension Attributes</recon_display>
 </computer_extension_attribute>

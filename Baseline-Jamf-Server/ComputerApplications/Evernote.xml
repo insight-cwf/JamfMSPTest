@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mac_application>
     <general>
-        <bundle_id>com.evernote.Evernote</bundle_id>
+        <name>Evernote</name>
         <category>
             <name>Productivty</name>
         </category>

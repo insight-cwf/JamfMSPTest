@@ -82,6 +82,8 @@
         <self_service_description>Meet Anywhere Anytime, Enjoy a rich meeting experience with integrated audio, high-quality video, and content sharing on the go.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
+            <filename>WebExMeetings.png</filename>
+            <uri>https://ics.services.jamfcloud.com/icon/hash_f59bd9b6b7d37777ee10f0a84e7cd1cf16f86a5ec30e85f54b7dd24732b4c967</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

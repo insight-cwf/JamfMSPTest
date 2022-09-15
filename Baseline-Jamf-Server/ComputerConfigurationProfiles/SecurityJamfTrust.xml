@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<os_x_configuration_profile>
+    <general>
+        <name>Jamf Trust</name>
+        <description></description>
+        <site>
+            <id>-1</id>
+            <name>None</name>
+        </site>
+        <category>
+            <name>Security</name>
+        </category>
+        <distribution_method>Install Automatically</distribution_method>
+        <user_removable>false</user_removable>
+        <level>System</level>
+        <uuid>0A02DE7A-7D24-46A4-A157-7EDA077E9A47</uuid>
+        <redeploy_on_update>Newly Assigned</redeploy_on_update>
+        <payloads>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1"&gt;&lt;dict&gt;&lt;key&gt;PayloadUUID&lt;/key&gt;&lt;string&gt;0A02DE7A-7D24-46A4-A157-7EDA077E9A47&lt;/string&gt;&lt;key&gt;PayloadType&lt;/key&gt;&lt;string&gt;Configuration&lt;/string&gt;&lt;key&gt;PayloadOrganization&lt;/key&gt;&lt;string&gt;Zero Corp&lt;/string&gt;&lt;key&gt;PayloadIdentifier&lt;/key&gt;&lt;string&gt;0A02DE7A-7D24-46A4-A157-7EDA077E9A47&lt;/string&gt;&lt;key&gt;PayloadDisplayName&lt;/key&gt;&lt;string&gt;Jamf Trust&lt;/string&gt;&lt;key&gt;PayloadDescription&lt;/key&gt;&lt;string/&gt;&lt;key&gt;PayloadVersion&lt;/key&gt;&lt;integer&gt;1&lt;/integer&gt;&lt;key&gt;PayloadEnabled&lt;/key&gt;&lt;true/&gt;&lt;key&gt;PayloadRemovalDisallowed&lt;/key&gt;&lt;true/&gt;&lt;key&gt;PayloadScope&lt;/key&gt;&lt;string&gt;System&lt;/string&gt;&lt;key&gt;PayloadContent&lt;/key&gt;&lt;array&gt;&lt;dict&gt;&lt;key&gt;PayloadUUID&lt;/key&gt;&lt;string&gt;70B0779E-E5CD-40E6-973D-A99151A5FFCC&lt;/string&gt;&lt;key&gt;PayloadType&lt;/key&gt;&lt;string&gt;com.apple.security.root&lt;/string&gt;&lt;key&gt;PayloadOrganization&lt;/key&gt;&lt;string&gt;Zero Corp&lt;/string&gt;&lt;key&gt;PayloadIdentifier&lt;/key&gt;&lt;string&gt;com.jamf.trust.profile.jit.doh.certificate.7bd6af2a-f2b7-2d9a-c9ab-073c18255e34&lt;/string&gt;&lt;key&gt;PayloadDisplayName&lt;/key&gt;&lt;string&gt;Jamf Trust Security Root CA&lt;/string&gt;&lt;key&gt;PayloadDescription&lt;/key&gt;&lt;string&gt;Adds a CA root certificate&lt;/string&gt;&lt;key&gt;PayloadVersion&lt;/key&gt;&lt;integer&gt;1&lt;/integer&gt;&lt;key&gt;PayloadEnabled&lt;/key&gt;&lt;true/&gt;&lt;key&gt;PayloadCertificateFileName&lt;/key&gt;&lt;string&gt;JamfSecurityCA.crt&lt;/string&gt;&lt;key&gt;PayloadContent&lt;/key&gt;&lt;data&gt;MIIF1DCCA7ygAwIBAgIJAIG2HJBUvyfVMA0GCSqGSIb3DQEBDQUAMHcxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJNTjEUMBIGA1UEBwwLTWlubmVhcG9saXMxDTALBgNVBAoMBEphbWYxFjAUBgNVBAsMDUphbWYgU2VjdXJpdHkxHjAcBgNVBAMMFUphbWYgU2VjdXJpdHkgUm9vdCBDQTAeFw0yMjAzMjQwOTU4MDlaFw00MjAzMTkwOTU4MDlaMHcxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJNTjEUMBIGA1UEBwwLTWlubmVhcG9saXMxDTALBgNVBAoMBEphbWYxFjAUBgNVBAsMDUphbWYgU2VjdXJpdHkxHjAcBgNVBAMMFUphbWYgU2VjdXJpdHkgUm9vdCBDQTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAMPSk0ilazD2WqeM10iZtZ0xRb+BQu5tAZDj9vGB/elVx54S9Lc9K7KKlk4BEXMXECTHOcwVcbpdC2iNLY3vxiDP5xvduYvIQ63cOkuxM3vev1Ll0/EZTeo5JXcltIa78oNlXnBR+vZj8iPyzS9yE1EMnea2jcjaC14Mulu073Q01U7ye9li4gAilirQu7vR3P1bhHJLFv4OwBTeA65vkgEkS3vtkuXxpCcMpzAOj23xBa9TEvI+O40SB44J0OJy2w4Yv1Mijmb5I0w3XBVmZqciz8fEenhTxx1igHWWAtcTC1xEONdgi9DewTtyGSVegpEBhQbafvosCQYpdue/8D44QNjdb+ut0/UgPGNjWraPvLSKnr7iEqwE6LFBmRg0YC1zIVMfzxfrW6ZNvbdvlWw9TaadHeg+qvvq+5Xk3bA4/rOitSLyg03XB/2YX6UmynLH3vHYlxDCwvIYqZFF8MwPsgDtHXAzL7/nA+EjGgP7ONTN87z8B7Bs9ajmDqOv2D9cVoQfpZTYveuwWbPfzP21W5YzoGqVLLX/KzcC2DW7QymEm6yZZ+C1k5pSXMXY2zp3N74UarfGJWEHjGKddSNrBhLxs592QkH6okt1HvNNiAtZY/F9q58P4+xumnGcKXHg98up0Sfuco/H8ZZmgGmzH13mN9ApYfc74dRN/zrPAgMBAAGjYzBhMB0GA1UdDgQWBBSj/aBMhYZJq4ss4Mq63NX9tZ7mtjAfBgNVHSMEGDAWgBSj/aBMhYZJq4ss4Mq63NX9tZ7mtjAPBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjANBgkqhkiG9w0BAQ0FAAOCAgEAH3nz/rcDuXT2z6gGrHNKDhqYd31uEU+hC6bgH3FhEgb3pk89RrAwmtdXaD4wZtC+z9zISv5JpYWoEu348+ptjffjil1V3tKA3R+qU1YeNnC1yQFnaXBpQsytqXBtwOTBTXcSacGJfwgG3o24Q1l8eeBgkf066Y2vNZ0q/2AOqegUfYOKDyfBkxK+Kev3XAffiK++FsuwpvUD2fowsjn9wu8/xIfUdfW6VQl6p2clpg1hGfUP5OlUsl2EkI6DXkz4JQCCILffeEYrDW4j64rwEDK3Ic5Om2YcWpuxAzumpilXbVcBdAIdBCQlvh1LviKSIaYMNQ6qPYqqOLpN5LAMo3HdMmlqSFUUNFt7PT1UoumXQ4NiTzpQxdNbVnSBGwDY2/c0IBmYuDT3hgMr+VSJ8w064AMLwXRU99QeawwLQnJCIeex/aCocbYukCMyYm7VtfSTb811A4u0qC9HDs4zohLHtGW1IbrQt52LkAGESK7+EG/VZEI9Hno0HcPfdCICa4M6ZMolYJ2TLrdIgG2TmcHTC9S4ZtY0x/VbA8uQddJ9DJ/7Zo1P4uC6dPP6lRY18bPhVrGw0PlSKaHv9FtoMQThjngXcoRBmT3/ZbTNExuKMqmpLOQj2e7gBhFRAwJwDQMRubDUo3n62GfONOPQmedP7WORpgcdS1/7ypaMafA=&lt;/data&gt;&lt;key&gt;AllowAllAppsAccess&lt;/key&gt;&lt;false/&gt;&lt;key&gt;KeyIsExtractable&lt;/key&gt;&lt;true/&gt;&lt;/dict&gt;&lt;dict&gt;&lt;key&gt;PayloadDisplayName&lt;/key&gt;&lt;string&gt;Custom Settings&lt;/string&gt;&lt;key&gt;PayloadIdentifier&lt;/key&gt;&lt;string&gt;com.jamf.trust.profile.jit.org.mozilla.firefox&lt;/string&gt;&lt;key&gt;PayloadOrganization&lt;/key&gt;&lt;string&gt;Jamf&lt;/string&gt;&lt;key&gt;PayloadType&lt;/key&gt;&lt;string&gt;com.apple.ManagedClient.preferences&lt;/string&gt;&lt;key&gt;PayloadUUID&lt;/key&gt;&lt;string&gt;042EDF06-7BB3-42BD-A6BF-3865CFAA4C0A&lt;/string&gt;&lt;key&gt;PayloadVersion&lt;/key&gt;&lt;integer&gt;1&lt;/integer&gt;&lt;key&gt;PayloadContent&lt;/key&gt;&lt;dict&gt;&lt;key&gt;org.mozilla.firefox&lt;/key&gt;&lt;dict&gt;&lt;key&gt;Forced&lt;/key&gt;&lt;array&gt;&lt;dict&gt;&lt;key&gt;mcx_preference_settings&lt;/key&gt;&lt;dict&gt;&lt;key&gt;EnterprisePoliciesEnabled&lt;/key&gt;&lt;true/&gt;&lt;key&gt;Certificates&lt;/key&gt;&lt;dict&gt;&lt;key&gt;ImportEnterpriseRoots&lt;/key&gt;&lt;true/&gt;&lt;/dict&gt;&lt;key&gt;DNSOverHTTPS&lt;/key&gt;&lt;dict&gt;&lt;key&gt;Enabled&lt;/key&gt;&lt;false/&gt;&lt;key&gt;Locked&lt;/key&gt;&lt;true/&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/array&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;dict&gt;&lt;key&gt;PayloadDisplayName&lt;/key&gt;&lt;string&gt;Custom Settings&lt;/string&gt;&lt;key&gt;PayloadIdentifier&lt;/key&gt;&lt;string&gt;com.jamf.trust.profile.jit.com.vivaldi.Vivaldi&lt;/string&gt;&lt;key&gt;PayloadOrganization&lt;/key&gt;&lt;string&gt;Jamf&lt;/string&gt;&lt;key&gt;PayloadType&lt;/key&gt;&lt;string&gt;com.apple.ManagedClient.preferences&lt;/string&gt;&lt;key&gt;PayloadUUID&lt;/key&gt;&lt;string&gt;4A6D6C1A-7C68-4BC2-933C-44550644164&lt;/string&gt;&lt;key&gt;PayloadVersion&lt;/key&gt;&lt;integer&gt;1&lt;/integer&gt;&lt;key&gt;PayloadContent&lt;/key&gt;&lt;dict&gt;&lt;key&gt;com.vivaldi.Vivaldi&lt;/key&gt;&lt;dict&gt;&lt;key&gt;Forced&lt;/key&gt;&lt;array&gt;&lt;dict&gt;&lt;key&gt;mcx_preference_settings&lt;/key&gt;&lt;dict&gt;&lt;key&gt;BuiltInDnsClientEnabled&lt;/key&gt;&lt;false/&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/array&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;dict&gt;&lt;key&gt;PayloadDisplayName&lt;/key&gt;&lt;string&gt;Custom Settings&lt;/string&gt;&lt;key&gt;PayloadIdentifier&lt;/key&gt;&lt;string&gt;com.jamf.trust.profile.jit.com.microsoft.Edge&lt;/string&gt;&lt;key&gt;PayloadOrganization&lt;/key&gt;&lt;string&gt;Jamf&lt;/string&gt;&lt;key&gt;PayloadType&lt;/key&gt;&lt;string&gt;com.apple.ManagedClient.preferences&lt;/string&gt;&lt;key&gt;PayloadUUID&lt;/key&gt;&lt;string&gt;591B969D-4D02-4A80-ACD8-19E66EEB52DE&lt;/string&gt;&lt;key&gt;PayloadVersion&lt;/key&gt;&lt;integer&gt;1&lt;/integer&gt;&lt;key&gt;PayloadContent&lt;/key&gt;&lt;dict&gt;&lt;key&gt;com.microsoft.Edge&lt;/key&gt;&lt;dict&gt;&lt;key&gt;Forced&lt;/key&gt;&lt;array&gt;&lt;dict&gt;&lt;key&gt;mcx_preference_settings&lt;/key&gt;&lt;dict&gt;&lt;key&gt;BuiltInDnsClientEnabled&lt;/key&gt;&lt;false/&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/array&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;dict&gt;&lt;key&gt;PayloadDisplayName&lt;/key&gt;&lt;string&gt;Custom Settings&lt;/string&gt;&lt;key&gt;PayloadIdentifier&lt;/key&gt;&lt;string&gt;com.jamf.trust.profile.jit.com.google.Chrome&lt;/string&gt;&lt;key&gt;PayloadOrganization&lt;/key&gt;&lt;string&gt;Jamf&lt;/string&gt;&lt;key&gt;PayloadType&lt;/key&gt;&lt;string&gt;com.apple.ManagedClient.preferences&lt;/string&gt;&lt;key&gt;PayloadUUID&lt;/key&gt;&lt;string&gt;60FA3322-F0E6-48A5-B22E-858B2AD51204&lt;/string&gt;&lt;key&gt;PayloadVersion&lt;/key&gt;&lt;integer&gt;1&lt;/integer&gt;&lt;key&gt;PayloadContent&lt;/key&gt;&lt;dict&gt;&lt;key&gt;com.google.Chrome&lt;/key&gt;&lt;dict&gt;&lt;key&gt;Forced&lt;/key&gt;&lt;array&gt;&lt;dict&gt;&lt;key&gt;mcx_preference_settings&lt;/key&gt;&lt;dict&gt;&lt;key&gt;BuiltInDnsClientEnabled&lt;/key&gt;&lt;false/&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/array&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;dict&gt;&lt;key&gt;PayloadDisplayName&lt;/key&gt;&lt;string&gt;Custom Settings&lt;/string&gt;&lt;key&gt;PayloadIdentifier&lt;/key&gt;&lt;string&gt;com.jamf.trust.profile.jit.com.brave.Browser&lt;/string&gt;&lt;key&gt;PayloadOrganization&lt;/key&gt;&lt;string&gt;Jamf&lt;/string&gt;&lt;key&gt;PayloadType&lt;/key&gt;&lt;string&gt;com.apple.ManagedClient.preferences&lt;/string&gt;&lt;key&gt;PayloadUUID&lt;/key&gt;&lt;string&gt;76975DA1-EDC2-49AB-A477-04BE8AB86B5B&lt;/string&gt;&lt;key&gt;PayloadVersion&lt;/key&gt;&lt;integer&gt;1&lt;/integer&gt;&lt;key&gt;PayloadContent&lt;/key&gt;&lt;dict&gt;&lt;key&gt;com.brave.Browser&lt;/key&gt;&lt;dict&gt;&lt;key&gt;Forced&lt;/key&gt;&lt;array&gt;&lt;dict&gt;&lt;key&gt;mcx_preference_settings&lt;/key&gt;&lt;dict&gt;&lt;key&gt;BuiltInDnsClientEnabled&lt;/key&gt;&lt;false/&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/array&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;/dict&gt;&lt;dict&gt;&lt;key&gt;PayloadDisplayName&lt;/key&gt;&lt;string&gt;DNS Settings&lt;/string&gt;&lt;key&gt;PayloadIdentifier&lt;/key&gt;&lt;string&gt;com.jamf.trust.profile.jit.doh&lt;/string&gt;&lt;key&gt;PayloadOrganization&lt;/key&gt;&lt;string&gt;Jamf&lt;/string&gt;&lt;key&gt;PayloadType&lt;/key&gt;&lt;string&gt;com.apple.dnsSettings.managed&lt;/string&gt;&lt;key&gt;PayloadUUID&lt;/key&gt;&lt;string&gt;7B43FD0C-B549-4F44-8E83-43E30CEDC472&lt;/string&gt;&lt;key&gt;PayloadVersion&lt;/key&gt;&lt;integer&gt;1&lt;/integer&gt;&lt;key&gt;ProhibitDisablement&lt;/key&gt;&lt;true/&gt;&lt;key&gt;DNSSettings&lt;/key&gt;&lt;dict&gt;&lt;key&gt;DNSProtocol&lt;/key&gt;&lt;string&gt;HTTPS&lt;/string&gt;&lt;key&gt;ServerURL&lt;/key&gt;&lt;string&gt;https://edns.wandera.com/v1/profile/xlx1w0zq/device/$UDID/dns-query&lt;/string&gt;&lt;key&gt;ServerAddresses&lt;/key&gt;&lt;array/&gt;&lt;key&gt;SupplementalMatchDomains&lt;/key&gt;&lt;array/&gt;&lt;/dict&gt;&lt;key&gt;OnDemandRules&lt;/key&gt;&lt;array&gt;&lt;dict&gt;&lt;key&gt;Action&lt;/key&gt;&lt;string&gt;EvaluateConnection&lt;/string&gt;&lt;key&gt;ActionParameters&lt;/key&gt;&lt;array&gt;&lt;dict&gt;&lt;key&gt;DomainAction&lt;/key&gt;&lt;string&gt;NeverConnect&lt;/string&gt;&lt;key&gt;Domains&lt;/key&gt;&lt;array&gt;&lt;string&gt;*.jamf.com&lt;/string&gt;&lt;string&gt;*.jamfcloud.com&lt;/string&gt;&lt;string&gt;*.push.apple.com&lt;/string&gt;&lt;string&gt;identity.apple.com&lt;/string&gt;&lt;string&gt;iprofiles.apple.com&lt;/string&gt;&lt;string&gt;setup.icloud.com&lt;/string&gt;&lt;string&gt;vpp.itunes.apple.com&lt;/string&gt;&lt;string&gt;deviceservices-external.apple.com&lt;/string&gt;&lt;/array&gt;&lt;/dict&gt;&lt;/array&gt;&lt;/dict&gt;&lt;dict&gt;&lt;key&gt;Action&lt;/key&gt;&lt;string&gt;Connect&lt;/string&gt;&lt;/dict&gt;&lt;/array&gt;&lt;/dict&gt;&lt;/array&gt;&lt;/dict&gt;&lt;/plist&gt;</payloads>
+    </general>
+    <scope>
+        <all_computers>true</all_computers>
+        <all_jss_users>false</all_jss_users>
+        <computers></computers>
+        <buildings></buildings>
+        <departments></departments>
+        <computer_groups></computer_groups>
+        <jss_users></jss_users>
+        <jss_user_groups></jss_user_groups>
+        <limitations>
+            <users></users>
+            <user_groups></user_groups>
+            <network_segments></network_segments>
+            <ibeacons></ibeacons>
+        </limitations>
+        <exclusions>
+            <computers></computers>
+            <buildings></buildings>
+            <departments></departments>
+            <computer_groups></computer_groups>
+            <users></users>
+            <user_groups></user_groups>
+            <network_segments></network_segments>
+            <ibeacons></ibeacons>
+            <jss_users></jss_users>
+            <jss_user_groups></jss_user_groups>
+        </exclusions>
+    </scope>
+    <self_service>
+        <self_service_display_name>Jamf Trust Bootstrap</self_service_display_name>
+        <install_button_text>Install</install_button_text>
+        <self_service_description></self_service_description>
+        <force_users_to_view_description>false</force_users_to_view_description>
+        <security>
+            <removal_disallowed>Never</removal_disallowed>
+        </security>
+        <self_service_icon></self_service_icon>
+        <feature_on_main_page>false</feature_on_main_page>
+        <self_service_categories>
+            <category>
+                <name>Security</name>
+                <display_in>true</display_in>
+                <feature_in>false</feature_in>
+            </category>
+        </self_service_categories>
+        <notification>false</notification>
+        <notification>Self Service</notification>
+        <notification_subject></notification_subject>
+        <notification_message></notification_message>
+    </self_service>
+</os_x_configuration_profile>

@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mobile_device_application>
     <general>
-        <name>Adobe Acrobat Reader: Edit PDF</name>
-        <bundle_id>com.adobe.Adobe-Reader</bundle_id>
         <internal_app>true</internal_app>
         <category>
             <name>Business</name>
         </category>
-        <ipa>
-            <name></name>
-            <uri></uri>
-            <data></data>
-        </ipa>
-        <icon>
-            <name>1024x1024bb.png</name>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_22c1e0aabb5f8cea9c73a756ad89ef288b375c7d7c81deb69b4cea51cdb7b5cb</uri>
-        </icon>
-        <mobile_device_provisioning_profile></mobile_device_provisioning_profile>
         <make_available_after_install>true</make_available_after_install>
         <itunes_country_region>US</itunes_country_region>
         <itunes_sync_time>0</itunes_sync_time>
@@ -32,60 +20,21 @@
         <free>true</free>
         <take_over_management>true</take_over_management>
         <host_externally>true</host_externally>
-        <external_url>https://apps.apple.com/us/app/adobe-acrobat-reader-edit-pdf/id469337564</external_url>
-        <site>
-            <id>-1</id>
-            <name>None</name>
-        </site>
     </general>
     <scope>
         <all_mobile_devices>true</all_mobile_devices>
         <all_jss_users>false</all_jss_users>
-        <mobile_devices></mobile_devices>
-        <buildings></buildings>
-        <departments></departments>
-        <mobile_device_groups></mobile_device_groups>
-        <jss_users></jss_users>
-        <jss_user_groups></jss_user_groups>
-        <limitations>
-            <users></users>
-            <user_groups></user_groups>
-            <network_segments></network_segments>
-        </limitations>
-        <exclusions>
-            <mobile_devices></mobile_devices>
-            <buildings></buildings>
-            <departments></departments>
-            <mobile_device_groups></mobile_device_groups>
-            <users></users>
-            <user_groups></user_groups>
-            <network_segments></network_segments>
-            <jss_users></jss_users>
-            <jss_user_groups></jss_user_groups>
-        </exclusions>
     </scope>
     <self_service>
-        <self_service_icon>
-            <filename>1024x1024bb.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_22c1e0aabb5f8cea9c73a756ad89ef288b375c7d7c81deb69b4cea51cdb7b5cb</uri>
-        </self_service_icon>
-        <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>
             <category>
                 <name>Business</name>
                 <display_in>true</display_in>
             </category>
         </self_service_categories>
-        <notification>false</notification>
-        <notification_subject></notification_subject>
-        <notification_message></notification_message>
     </self_service>
-    <vpp_codes></vpp_codes>
     <vpp>
         <assign_vpp_device_based_licenses>true</assign_vpp_device_based_licenses>
         <vpp_admin_account_id>1</vpp_admin_account_id>
     </vpp>
-    <app_configuration>
-        <preferences></preferences>
-    </app_configuration>
 </mobile_device_application>

@@ -82,6 +82,8 @@
         <self_service_description>Creative Cloud for desktop is a great place to start any creative project. Quickly launch and update your desktop apps. Manage and share assets stored in Creative Cloud. Download fonts or high-quality royalty-free Adobe Stock assets. And showcase and discover creative work on Behance. Best of all, the application stays out of your way but is there when you need it, so you can focus on creativity.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
+            <filename>AdobeCreativeCloudDesktop.png</filename>
+            <uri>https://ics.services.jamfcloud.com/icon/hash_41a23851efbe635282a1b7ea1583518df35cad82bdf8cdb58faeb96f5ebf8b37</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

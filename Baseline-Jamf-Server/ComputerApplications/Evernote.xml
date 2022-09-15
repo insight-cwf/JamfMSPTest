@@ -2,6 +2,7 @@
 <mac_application>
     <general>
         <name>Evernote</name>
+        <bundle_id>com.evernote</bundle_id>
         <category>
             <name>Productivty</name>
         </category>

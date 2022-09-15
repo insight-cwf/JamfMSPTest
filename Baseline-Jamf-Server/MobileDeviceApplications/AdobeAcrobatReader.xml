@@ -17,8 +17,6 @@
             <uri>https://ics.services.jamfcloud.com/icon/hash_22c1e0aabb5f8cea9c73a756ad89ef288b375c7d7c81deb69b4cea51cdb7b5cb</uri>
         </icon>
         <mobile_device_provisioning_profile></mobile_device_provisioning_profile>
-        <url deprecated="9.4">https://apps.apple.com/us/app/adobe-acrobat-reader-edit-pdf/id469337564</url>
-        <itunes_store_url>https://apps.apple.com/us/app/adobe-acrobat-reader-edit-pdf/id469337564</itunes_store_url>
         <make_available_after_install>true</make_available_after_install>
         <itunes_country_region>US</itunes_country_region>
         <itunes_sync_time>0</itunes_sync_time>

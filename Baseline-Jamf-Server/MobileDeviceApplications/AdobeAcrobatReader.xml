@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mobile_device_application>
+    <general>
+        <name>Adobe Acrobat Reader: Edit PDF</name>
+        <display_name>Adobe Acrobat Reader: Edit PDF</display_name>
+        <description>Do you need to work with documents on the go? Get the Adobe Acrobat Reader mobile app, the world’s most trusted PDF viewer, with more than 635 million installs. Store your files online and read documents anywhere. You can also view, share, annotate, and add signatures to documents.
+
+With a premium subscription, you can edit text and images in PDFs, convert and create PDFs, combine, or organize PDFs, and more.
+
+VIEW AND PRINT PDFs
+• Open and view PDFs.
+• Choose Single Page or Continuous scroll mode.
+• Help save battery with dark mode.
+• Print documents directly from your device.
+
+READ PDFs MORE EASILY
+• Get the best PDF reading experience with Liquid Mode.
+• Content in your PDF document reflows to fit your screen.
+• Use the Liquid Mode outline for quick navigation.
+• Search to find text fast in your documents.
+
+SHARE PDFs AND COLLABORATE
+• Share files for commenting or viewing.
+• Collect comments from multiple people in one file online.
+• Speed up document reviews by responding to each other’s comments.
+• Receive activity notifications for files you’ve shared.
+
+ANNOTATE PDFs
+• Add notes and comments to PDFs, including sticky notes and highlights.
+• Write on PDF documents by adding text or drawings.
+• Share a file with others to collect all comments in one place.
+
+FILL AND SIGN FORMS
+• Easily fill in PDF forms with the form filler feature.
+• Add a signature to documents using your finger or stylus.
+
+STORE AND MANAGE FILES
+• Sign in to your free account to store and access files across devices.
+• Access all your files by linking online storage accounts, like Microsoft OneDrive, Dropbox, or Google Drive.
+• Star files to quickly open your most important or favorite documents.
+
+CONNECT TO GOOGLE DRIVE
+• Connect your Google Drive account to access PDFs and other files with ease.
+• View, share, and star Google Drive files.
+• Create, edit, combine, compress, and export Google Drive files with a subscription.
+
+WORK WITH SCANNED DOCUMENTS
+• Access scanned PDFs that you’ve captured using the free Adobe Scan app.
+• Open your scans in Adobe Acrobat Reader to fill, sign, comment, and share.
+
+EDIT PDFs (PREMIUM FEATURE)
+• Subscribe to edit text and images directly in your PDF.
+• Fix a typo or add a paragraph with the PDF editor feature.
+• Add, delete, or rotate an image.
+
+Subscribe for even more PDF power. Subscriptions work across mobile and web. 
+• Edit text and images right in your PDF document (mobile only).
+• Combine files into one PDF file and organize pages.
+• Create PDF files from documents or images.
+• Export PDFs to Microsoft Word, Excel, or PowerPoint.
+• Compress PDF files to reduce file size.
+• Protect PDF documents by adding passwords.
+
+The Acrobat Reader mobile app is designed to work with customers who have Enterprise Mobility Management (EMM) enabled.
+
+Terms &amp; Conditions: 
+Your use of this application is governed by the Adobe General Terms of Use http://www.adobe.com/go/terms_linkfree_en and the Adobe Privacy Policy http://www.adobe.com/go/privacy_policy_linkfree_en
+
+Do Not Sell My Personal Information: www.adobe.com/go/ca-rights-linkfree
+
+Adobe Acrobat Reader puts your office in your pocket. View, annotate, fill, sign, and share PDFs for free. Working with PDF documents has never been so easy.</description>
+        <bundle_id>com.adobe.Adobe-Reader</bundle_id>
+        <version>22.08.00</version>
+        <internal_app>true</internal_app>
+        <category>
+            <id>25</id>
+            <name>Business</name>
+        </category>
+        <ipa>
+            <name></name>
+            <uri></uri>
+            <data></data>
+        </ipa>
+        <icon>
+            <id>58</id>
+            <name>1024x1024bb.png</name>
+            <uri>https://ics.services.jamfcloud.com/icon/hash_22c1e0aabb5f8cea9c73a756ad89ef288b375c7d7c81deb69b4cea51cdb7b5cb</uri>
+        </icon>
+        <mobile_device_provisioning_profile></mobile_device_provisioning_profile>
+        <url deprecated="9.4">https://apps.apple.com/us/app/adobe-acrobat-reader-edit-pdf/id469337564</url>
+        <itunes_store_url>https://apps.apple.com/us/app/adobe-acrobat-reader-edit-pdf/id469337564</itunes_store_url>
+        <make_available_after_install>true</make_available_after_install>
+        <itunes_country_region>US</itunes_country_region>
+        <itunes_sync_time>0</itunes_sync_time>
+        <deployment_type>Make Available in Self Service</deployment_type>
+        <deploy_automatically>false</deploy_automatically>
+        <deploy_as_managed_app>true</deploy_as_managed_app>
+        <remove_app_when_mdm_profile_is_removed>true</remove_app_when_mdm_profile_is_removed>
+        <prevent_backup_of_app_data>false</prevent_backup_of_app_data>
+        <allow_user_to_delete>true</allow_user_to_delete>
+        <require_network_tethered>false</require_network_tethered>
+        <keep_description_and_icon_up_to_date>false</keep_description_and_icon_up_to_date>
+        <keep_app_updated_on_devices>false</keep_app_updated_on_devices>
+        <free>true</free>
+        <take_over_management>true</take_over_management>
+        <host_externally>true</host_externally>
+        <external_url>https://apps.apple.com/us/app/adobe-acrobat-reader-edit-pdf/id469337564</external_url>
+        <site>
+            <id>-1</id>
+            <name>None</name>
+        </site>
+    </general>
+    <scope>
+        <all_mobile_devices>true</all_mobile_devices>
+        <all_jss_users>false</all_jss_users>
+        <mobile_devices></mobile_devices>
+        <buildings></buildings>
+        <departments></departments>
+        <mobile_device_groups></mobile_device_groups>
+        <jss_users></jss_users>
+        <jss_user_groups></jss_user_groups>
+        <limitations>
+            <users></users>
+            <user_groups></user_groups>
+            <network_segments></network_segments>
+        </limitations>
+        <exclusions>
+            <mobile_devices></mobile_devices>
+            <buildings></buildings>
+            <departments></departments>
+            <mobile_device_groups></mobile_device_groups>
+            <users></users>
+            <user_groups></user_groups>
+            <network_segments></network_segments>
+            <jss_users></jss_users>
+            <jss_user_groups></jss_user_groups>
+        </exclusions>
+    </scope>
+    <self_service>
+        <self_service_description>Do you need to work with documents on the go? Get the Adobe Acrobat Reader mobile app, the world’s most trusted PDF viewer, with more than 635 million installs. Store your files online and read documents anywhere. You can also view, share, annotate, and add signatures to documents.
+
+With a premium subscription, you can edit text and images in PDFs, convert and create PDFs, combine, or organize PDFs, and more.
+
+VIEW AND PRINT PDFs
+• Open and view PDFs.
+• Choose Single Page or Continuous scroll mode.
+• Help save battery with dark mode.
+• Print documents directly from your device.
+
+READ PDFs MORE EASILY
+• Get the best PDF reading experience with Liquid Mode.
+• Content in your PDF document reflows to fit your screen.
+• Use the Liquid Mode outline for quick navigation.
+• Search to find text fast in your documents.
+
+SHARE PDFs AND COLLABORATE
+• Share files for commenting or viewing.
+• Collect comments from multiple people in one file online.
+• Speed up document reviews by responding to each other’s comments.
+• Receive activity notifications for files you’ve shared.
+
+ANNOTATE PDFs
+• Add notes and comments to PDFs, including sticky notes and highlights.
+• Write on PDF documents by adding text or drawings.
+• Share a file with others to collect all comments in one place.
+
+FILL AND SIGN FORMS
+• Easily fill in PDF forms with the form filler feature.
+• Add a signature to documents using your finger or stylus.
+
+STORE AND MANAGE FILES
+• Sign in to your free account to store and access files across devices.
+• Access all your files by linking online storage accounts, like Microsoft OneDrive, Dropbox, or Google Drive.
+• Star files to quickly open your most important or favorite documents.
+
+CONNECT TO GOOGLE DRIVE
+• Connect your Google Drive account to access PDFs and other files with ease.
+• View, share, and star Google Drive files.
+• Create, edit, combine, compress, and export Google Drive files with a subscription.
+
+WORK WITH SCANNED DOCUMENTS
+• Access scanned PDFs that you’ve captured using the free Adobe Scan app.
+• Open your scans in Adobe Acrobat Reader to fill, sign, comment, and share.
+
+EDIT PDFs (PREMIUM FEATURE)
+• Subscribe to edit text and images directly in your PDF.
+• Fix a typo or add a paragraph with the PDF editor feature.
+• Add, delete, or rotate an image.
+
+Subscribe for even more PDF power. Subscriptions work across mobile and web. 
+• Edit text and images right in your PDF document (mobile only).
+• Combine files into one PDF file and organize pages.
+• Create PDF files from documents or images.
+• Export PDFs to Microsoft Word, Excel, or PowerPoint.
+• Compress PDF files to reduce file size.
+• Protect PDF documents by adding passwords.
+
+The Acrobat Reader mobile app is designed to work with customers who have Enterprise Mobility Management (EMM) enabled.
+
+Terms &amp; Conditions: 
+Your use of this application is governed by the Adobe General Terms of Use http://www.adobe.com/go/terms_linkfree_en and the Adobe Privacy Policy http://www.adobe.com/go/privacy_policy_linkfree_en
+
+Do Not Sell My Personal Information: www.adobe.com/go/ca-rights-linkfree
+
+Adobe Acrobat Reader puts your office in your pocket. View, annotate, fill, sign, and share PDFs for free. Working with PDF documents has never been so easy.</self_service_description>
+        <self_service_icon>
+            <id>58</id>
+            <filename>1024x1024bb.png</filename>
+            <uri>https://ics.services.jamfcloud.com/icon/hash_22c1e0aabb5f8cea9c73a756ad89ef288b375c7d7c81deb69b4cea51cdb7b5cb</uri>
+        </self_service_icon>
+        <feature_on_main_page>false</feature_on_main_page>
+        <self_service_categories>
+            <category>
+                <id>25</id>
+                <name>Business</name>
+                <display_in>true</display_in>
+            </category>
+        </self_service_categories>
+        <notification>false</notification>
+        <notification_subject></notification_subject>
+        <notification_message></notification_message>
+    </self_service>
+    <vpp_codes></vpp_codes>
+    <vpp>
+        <assign_vpp_device_based_licenses>true</assign_vpp_device_based_licenses>
+        <vpp_admin_account_id>1</vpp_admin_account_id>
+        <total_vpp_licenses>100</total_vpp_licenses>
+        <remaining_vpp_licenses>100</remaining_vpp_licenses>
+        <used_vpp_licenses>0</used_vpp_licenses>
+    </vpp>
+    <app_configuration>
+        <preferences></preferences>
+    </app_configuration>
+</mobile_device_application>

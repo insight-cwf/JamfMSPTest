@@ -79,7 +79,7 @@
         <self_service_display_name>Sketch</self_service_display_name>
         <install_button_text>Install</install_button_text>
         <reinstall_button_text>Reinstall</reinstall_button_text>
-        <self_service_description>Sketch gives you the tools to design.</self_service_description>
+        <self_service_description>Sketch gives you all the tools you need for a truly collaborative design process. From early ideas to pixel-perfect artwork, playable prototypes and developer handoff. It all starts here.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
         </self_service_icon>

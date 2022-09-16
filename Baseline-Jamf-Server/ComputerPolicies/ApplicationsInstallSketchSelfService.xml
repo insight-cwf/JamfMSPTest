@@ -86,11 +86,6 @@
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>
             <category>
-                <name>Creative</name>
-                <display_in>true</display_in>
-                <feature_in>false</feature_in>
-            </category>
-            <category>
                 <name>Productivity</name>
                 <display_in>true</display_in>
                 <feature_in>false</feature_in>

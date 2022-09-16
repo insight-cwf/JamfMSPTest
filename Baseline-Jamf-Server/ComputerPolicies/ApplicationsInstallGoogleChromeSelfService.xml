@@ -82,8 +82,6 @@
         <self_service_description>Download the new Google Chrome for your iPhone and iPad. Now more simple, secure and faster than ever. Get the best of Google Search, and easily sync your bookmarks and passwords with Chrome on your laptop. Download the fast, secure browser recommended by Google.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>GoogleChrome.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_7b13221a96b59ceecc72b80e42719a6df7574a7c6195c9a36c27be0c1ce43ac3</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

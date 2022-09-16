@@ -82,8 +82,6 @@
         <self_service_description>Google Drive, part of Google Workspace, is a safe place to back up and access all your files from any device. Easily invite others to view, edit, or leave comments on any of your files or folders.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>GoogleDrive.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_4df4d6a99c935703dbcb811ca0560db60633499d74ee3ed04fbd0cfba1fcfa2b</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

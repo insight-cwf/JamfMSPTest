@@ -82,8 +82,6 @@
         <self_service_description>Whether you’re working with teammates on a project or planning a weekend activity with loved ones, Microsoft Teams helps bring people together so that they can get things done. It’s the only app that has chats, meetings, files, tasks, and calendars in one place—so you can easily connect with people and bring plans to life. Get family and friends together to manage tasks at home or plan a surprise birthday party. Work with teammates via secure meetings, document collaboration, and built-in cloud storage. You can do it all in Microsoft Teams.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>MicrosoftTeams.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_30f3c8072e62eee8218c2c6c74abfa17549314e3ae9cc6aac73c340973c8984d</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

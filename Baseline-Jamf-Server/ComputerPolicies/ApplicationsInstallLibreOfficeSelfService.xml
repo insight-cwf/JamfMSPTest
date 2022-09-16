@@ -82,8 +82,6 @@
         <self_service_description>LibreOffice is Free and Open Source Software, available for everyone to use, share and modify, and produced by a worldwide community of hundreds of developers.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>LibreOffice.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_572c39eb8af95593b22e3beec2b24492dc8a5ac14a0046d4c4b0210ec17ac43d</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

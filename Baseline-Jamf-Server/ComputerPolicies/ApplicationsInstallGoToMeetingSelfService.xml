@@ -82,8 +82,6 @@
         <self_service_description>GoToMeeting gives you the accessibility &amp; reliability you need to take your work with you on the road &amp; across the globe. Whether it’s a business-critical meeting, or a casual discussion, we know that every conversation is important. With more than 2.5 million downloads &amp; a user rating over 4.5 stars. </self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>GoToMeeting.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_f8dce6485c1de1188164d87e2a3d036d568e62b4039e381c253cb3e8ac74ffd1</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

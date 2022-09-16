@@ -82,8 +82,6 @@
         <self_service_description>Choose Firefox to be your go-to browser and help shape a better internet for you, your family and community. Download Firefox now for iPhone, iPad and Mac.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>Firefox.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_d2a4b0d8a74e5fee1fe57db1e52f38e4de156c976cdc95c7f2992fc8426766f6</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

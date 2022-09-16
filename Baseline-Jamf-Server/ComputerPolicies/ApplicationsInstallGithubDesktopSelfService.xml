@@ -82,8 +82,6 @@
         <self_service_description>There’s a lot you can do on GitHub that doesn’t require a complex development environment – like sharing feedback on a design discussion, or reviewing a few lines of code. GitHub for iOS lets you move work forward wherever you are. Stay in touch with your team, triage issues, and even merge, right from the app. We’re making these tasks easy for you to perform, no matter where you work, with a beautifully native experience.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>GithubDesktop.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_f1bd98223918a232d41f7139c7b789d06b51f2f08c80952ff955a5e48aec9670</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

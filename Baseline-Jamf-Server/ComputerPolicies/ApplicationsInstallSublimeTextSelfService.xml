@@ -82,8 +82,6 @@
         <self_service_description>Sublime Text is an innovative text and code editor for OS X and Windows with a thriving ecosystem of add-on packages.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>SublimeText.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_e7ae6472d2839ada701e6938c9c5830282f7bc4ec0ec3f018a230f87c3f0ddff</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

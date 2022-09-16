@@ -82,8 +82,6 @@
         <self_service_description>Citrix Workspace app lets you access your SaaS, web apps, mobile, virtual apps, files, and desktops to help you be as productive on the go as you are in the office. If your company uses Citrix, you have the freedom to work on your favorite device from wherever you are.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>CitrixWorkspace.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_24078947dec502376e720cc5c7c8891b9771b433a1af663f1a8bd8a812028d6e</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

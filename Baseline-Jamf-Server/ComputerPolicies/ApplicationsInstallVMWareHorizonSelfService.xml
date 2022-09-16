@@ -82,8 +82,6 @@
         <self_service_description>VMware Horizon is a commercial desktop and app virtualization product developed by VMware, Inc for Microsoft Windows, Linux and macOS operating systems.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>VMWareHorizonClient.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_a48cb8fd9eb4f7225c42f8bead373938168ac963655707d1d798d9ccb6844242</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

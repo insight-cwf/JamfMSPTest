@@ -82,8 +82,6 @@
         <self_service_description>It's super easy! Install the free Zoom app, click on "New Meeting," and invite up to 100 people to join you on video! Connect with anyone on iPad, iPhone, other mobile devices, Windows, Mac, Zoom Rooms, H.323/SIP room systems, and telephones.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>Zoom.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_ee3e2d6bb4ae319527eacb061eca9c91139eb686eed529c9369fa84e2a31ea03</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

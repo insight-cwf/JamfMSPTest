@@ -94,8 +94,6 @@
       Share PDFs and gather comments from multiple people in one file. Recipients get an email with a link to your PDF. They just click to open, view, and comment. Reviewers can respond to each other’s comments and you get notified of activity. It’s that easy.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>AdobeAcrobatReaderDC.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_e1f9f678440369212d54fcf5cffd20aca19f773bd59e5d4ca727ddf6df33b96a</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

@@ -84,8 +84,6 @@ Browse the web anywhere with one seamless experience from your phone to your com
 Tracking prevention, AdBlock, and InPrivate browsing are available to help you stay safer online.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>MicrosoftEdge.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_b8442f98dddb3eb0a586929381c2255a2c5e62c3f05d6e6ff4cad4e019f5e279</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

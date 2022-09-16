@@ -82,8 +82,6 @@
         <self_service_description>Dropbox lets you upload, save, and transfer photos and files to the cloud. Backup and sync your pictures, videos, documents, and other files to cloud storage and access them from any device, anywhere. With advanced sharing features, it’s easy to share and send photos or files to family, friends, and co-workers.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>Dropbox.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_5ca21ca7cbdbac99fd36450932fdaf7abc499f77d523b510aa55259b5d1dd6dd</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

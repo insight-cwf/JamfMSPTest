@@ -82,8 +82,6 @@
         <self_service_description>BlueJeans delivers a premium video conferencing experience that is optimized for hybrid work. With amazing features, like Dolby Voice® audio, BlueJeans helps make every meeting more productive regardless of where the participants are located.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>BlueJeans.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_79cc290e1d2013a65917d30684d337487a51f9b6f4c6c8c6a22d0aa2fbe2c06e</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

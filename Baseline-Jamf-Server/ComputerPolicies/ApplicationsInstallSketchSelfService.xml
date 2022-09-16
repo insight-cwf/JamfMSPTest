@@ -82,8 +82,6 @@
         <self_service_description>Sketch gives you all the tools you need for a truly collaborative design process. From early ideas to pixel-perfect artwork, playable prototypes and developer handoff. It all starts here.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>Sketch.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_5fe6437a4c4b824dc9efdf9e9f3650425bbb6e4409979b63a71746c5911c03ed</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

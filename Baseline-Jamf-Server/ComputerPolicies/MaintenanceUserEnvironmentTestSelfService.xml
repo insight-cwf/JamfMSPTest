@@ -82,8 +82,6 @@
         <self_service_description></self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
-            <filename>NetworkMaint.png</filename>
-            <uri>https://ics.services.jamfcloud.com/icon/hash_7e37ff915f4ff7ddbc8fe11bd6eea561608f2c13077f4e9a1499a65297296b81</uri>
         </self_service_icon>
         <feature_on_main_page>false</feature_on_main_page>
         <self_service_categories>

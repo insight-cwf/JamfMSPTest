@@ -2,8 +2,6 @@
 <mobile_device_application>
     <general>
         <bundle_id>com.jamf.reset</bundle_id>
-        <version>3.1.0</version>
-        <internal_app>true</internal_app>
         <category>
             <name>Utilities</name>
         </category>

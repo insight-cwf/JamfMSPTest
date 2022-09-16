@@ -3,7 +3,7 @@
     <general>
         <bundle_id>com.adobe.ccsdk.loki</bundle_id>
         <category>
-            <name>Productivty</name>
+            <name>Productivity</name>
         </category>
         <make_available_after_install>true</make_available_after_install>
         <itunes_country_region>US</itunes_country_region>

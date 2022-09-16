@@ -3,7 +3,7 @@
     <general>
         <bundle_id>com.apple.Keynote</bundle_id>
         <category>
-            <name>Productivty</name>
+            <name>Productivity</name>
         </category>
         <make_available_after_install>true</make_available_after_install>
         <itunes_country_region>US</itunes_country_region>
@@ -32,7 +32,7 @@
                 <display_in>true</display_in>
             </category>
             <category>
-                <name>Productivty</name>
+                <name>Productivity</name>
                 <display_in>true</display_in>
             </category>
         </self_service_categories>

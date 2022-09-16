@@ -5,7 +5,6 @@
         <description></description>
         <level>System</level>
         <site>
-            <id>-1</id>
             <name>None</name>
         </site>
         <category>
@@ -21,30 +20,6 @@
     <scope>
         <all_mobile_devices>true</all_mobile_devices>
         <all_jss_users>false</all_jss_users>
-        <mobile_devices></mobile_devices>
-        <buildings></buildings>
-        <departments></departments>
-        <mobile_device_groups></mobile_device_groups>
-        <jss_users></jss_users>
-        <jss_user_groups></jss_user_groups>
-        <limitations>
-            <users></users>
-            <user_groups></user_groups>
-            <network_segments></network_segments>
-            <ibeacons></ibeacons>
-        </limitations>
-        <exclusions>
-            <mobile_devices></mobile_devices>
-            <buildings></buildings>
-            <departments></departments>
-            <mobile_device_groups></mobile_device_groups>
-            <users></users>
-            <user_groups></user_groups>
-            <network_segments></network_segments>
-            <ibeacons></ibeacons>
-            <jss_users></jss_users>
-            <jss_user_groups></jss_user_groups>
-        </exclusions>
     </scope>
     <self_service>
         <self_service_description></self_service_description>

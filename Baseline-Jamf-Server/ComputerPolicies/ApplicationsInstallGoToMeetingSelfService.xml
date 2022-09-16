@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <policy>
     <general>
+        <id>17</id>
         <name>Application - GoToMeeting - Install</name>
         <enabled>true</enabled>
         <trigger>EVENT</trigger>
@@ -18,7 +19,7 @@
         <target_drive>/</target_drive>
         <offline>false</offline>
         <category>
-            <name>Business</name>
+                        <name>Business</name>
         </category>
         <date_time_limitations>
             <activation_date></activation_date>

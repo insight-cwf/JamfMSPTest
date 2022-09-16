@@ -79,7 +79,7 @@
         <self_service_display_name>GoToMeeting</self_service_display_name>
         <install_button_text>Install</install_button_text>
         <reinstall_button_text>Reinstall</reinstall_button_text>
-        <self_service_description>GoToMeeting gives you the accessibility &amp; reliability you need to take your work with you on the road &amp; across the globe. Whether it’s a business-critical meeting, or a casual discussion, we know that every conversation is important. With more than 2.5 million downloads &amp; a user rating over 4.5 stars. </self_service_description>
+        <self_service_description>GoToMeeting gives you the accessibility and reliability you need to take your work with you on the road and across the globe. Whether its a business-critical meeting, or a casual discussion, we know that every conversation is important. With more than 2.5 million downloads and a user rating over 4.5 stars. </self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
         </self_service_icon>

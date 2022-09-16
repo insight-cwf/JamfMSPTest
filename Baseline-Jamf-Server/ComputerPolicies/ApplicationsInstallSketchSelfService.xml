@@ -9,7 +9,7 @@
         <trigger_login>false</trigger_login>
         <trigger_network_state_changed>false</trigger_network_state_changed>
         <trigger_startup>false</trigger_startup>
-        <trigger_other>install-googleDrive</trigger_other>
+        <trigger_other>install-sketch</trigger_other>
         <frequency>Once per computer</frequency>
         <retry_event>none</retry_event>
         <retry_attempts>-1</retry_attempts>
@@ -76,10 +76,10 @@
     </scope>
     <self_service>
         <use_for_self_service>true</use_for_self_service>
-        <self_service_display_name>Google Drive</self_service_display_name>
+        <self_service_display_name>Sketch</self_service_display_name>
         <install_button_text>Install</install_button_text>
         <reinstall_button_text>Reinstall</reinstall_button_text>
-        <self_service_description>Google Drive, part of Google Workspace, is a safe place to back up and access all your files from any device. Easily invite others to view, edit, or leave comments on any of your files or folders.</self_service_description>
+        <self_service_description>Sketch gives you the tools to design.</self_service_description>
         <force_users_to_view_description>false</force_users_to_view_description>
         <self_service_icon>
         </self_service_icon>
@@ -96,9 +96,6 @@
                 <feature_in>false</feature_in>
             </category>
         </self_service_categories>
-        <notification>false</notification>
-        <notification>Self Service</notification>
-        <notification_subject>Citrix Workspace</notification_subject>
         <notification_message></notification_message>
     </self_service>
     <package_configuration>
@@ -111,7 +108,7 @@
         <script>
             <name>Applications - Installomator</name>
             <priority>After</priority>
-            <parameter4>googledrive</parameter4>
+            <parameter4>sketch</parameter4>
             <parameter5></parameter5>
             <parameter6></parameter6>
             <parameter7></parameter7>

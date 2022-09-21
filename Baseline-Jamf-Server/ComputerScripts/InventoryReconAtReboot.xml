@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<script>
+    <name>Inventory - Recon At Reboot</name>
+    <category>Inventory</category>
+    <filename>Inventory - Recon At Reboot</filename>
+    <info>Creates a LaunchDaemon and script to run a Jamf Recon
+at next reboot. (Based on script by @dan-snelson)
+
+Created 08.29.2022 @robjschroeder</info>
+    <notes></notes>
+    <priority>After</priority>
+    <parameters>
+        <parameter4>plistDomain (com.org)</parameter4>
+        <parameter5>plistLabel (ReconAtReboot)</parameter5>
+    </parameters>
+    <os_requirements></os_requirements>
+    <script_contents>#!/bin/bash
+
+# Creates a LaunchDaemon and script to run a Jamf Recon
+# at next reboot. (Based on script by @dan-snelson)
+#
+# Created 08.29.2022 @robjschroeder
+﻿
+##################################################
+# Variables -- edit as needed
+
+scriptVersion="1.0"
+plistDomain="$4"
+plistLabel="$5"
+plistLabel="$plistDomain.$plistLabel"
+timestamp=$( /bin/date '+%Y-%m-%d-%H%M%S' )
+
+#
+##################################################
+
+echo "Recon at Reboot (${scriptVersion})"
+
+echo "Create the LaunchDaemon ..."
+
+/bin/echo "&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;
+&lt;!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\"&gt;
+&lt;plist version=\"1.0\"&gt;
+    &lt;dict&gt;
+        &lt;key&gt;Label&lt;/key&gt;
+        &lt;string&gt;${plistLabel}&lt;/string&gt;
+        &lt;key&gt;ProgramArguments&lt;/key&gt;
+        &lt;array&gt;
+            &lt;string&gt;/bin/sh&lt;/string&gt;
+            &lt;string&gt;/private/var/tmp/reconAtReboot.bash&lt;/string&gt;
+        &lt;/array&gt;
+        &lt;key&gt;RunAtLoad&lt;/key&gt;
+        &lt;true/&gt;
+    &lt;/dict&gt;
+&lt;/plist&gt;" &gt; /Library/LaunchDaemons/$plistLabel.plist
+
+echo "Set LaunchDaemon file permissions ..."
+
+/usr/sbin/chown root:wheel /Library/LaunchDaemons/$plistLabel.plist
+/bin/chmod 644 /Library/LaunchDaemons/$plistLabel.plist
+/bin/chmod +x /Library/LaunchDaemons/$plistLabel.plist
+
+echo "Create reboot script ..."
+
+cat &lt;&lt; '==endOfScript==' &gt; /private/var/tmp/reconAtReboot.bash
+#!/bin/bash
+
+# Run Jamf Recon at reboot
+#
+# Created 08.29.2022 @robjschroeder
+﻿
+##################################################
+# Variables -- edit as needed
+
+scriptVersion="1.0"
+plistDomain="$4"
+plistLabel="$5"
+plistLabel="$plistDomain.$plistLabel"
+timestamp=$( /bin/date '+%Y-%m-%d-%H%M%S' )
+scriptResult=""
+
+#
+##################################################
+# Functions -- do not edit below here
+
+jssConnectionStatus () {
+
+    scriptResult+="Check for Jamf Pro server connection; "
+
+    unset jssStatus
+    jssStatus=$( /usr/local/bin/jamf checkJSSConnection 2&gt;&amp;1 | /usr/bin/tr -d '\n' )
+
+    case "${jssStatus}" in
+
+        *"The JSS is available."        )   jssAvailable="yes" ;;
+        *"No such file or directory"    )   jssAvailable="not installed" ;;
+        *                               )   jssAvailable="unknown" ;;
+
+    esac
+
+}
+
+echo "Starting Recon at Reboot (${scriptVersion}) at $timestamp" &gt;&gt; /private/var/tmp/$plistLabel.log
+
+# Hard-coded sleep of 25 seconds for auto-launched applications to start
+sleep "25"
+
+jssConnectionStatus
+
+counter=1
+
+until [[ "${jssAvailable}" == "yes" ]] || [[ "${counter}" -gt "10" ]]; do
+    scriptResult+="Check ${counter} of 10: Jamf Pro server NOT reachable; waiting to re-check; "
+    sleep "30"
+    jssConnectionStatus
+    ((counter++))
+done
+
+if [[ "${jssAvailable}" == "yes" ]]; then
+
+    echo "Jamf Pro server is available, proceeding; " &gt;&gt; /private/var/tmp/$plistLabel.log
+
+    scriptResult+="Resuming Recon at Reboot; "
+
+    scriptResult+="Updating inventory; "
+
+    /usr/local/bin/jamf recon
+
+else
+
+    scriptResult+="Jamf Pro server is NOT available; exiting."
+
+fi
+
+# Delete launchd plist
+
+scriptResult+="Delete $plistLabel.plist; "
+/bin/rm -fv /Library/LaunchDaemons/$plistLabel.plist
+
+# Delete script
+
+scriptResult+="Delete script; "
+/bin/rm -fv /private/var/tmp/reconAtReboot.bash
+
+# Exit
+
+scriptResult+="End-of-line."
+
+echo "${scriptResult}" &gt;&gt; /private/var/tmp/$plistLabel.log
+
+exit 0
+==endOfScript==
+
+echo "Set script file permissions ..."
+/usr/sbin/chown root:wheel /private/var/tmp/reconAtReboot.bash
+/bin/chmod 644 /private/var/tmp/reconAtReboot.bash
+/bin/chmod +x /private/var/tmp/reconAtReboot.bash
+
+echo "Create Log File at /private/var/tmp/$plistLabel.log ..."
+touch /private/var/tmp/$plistLabel.log
+echo "Created $plistLabel.log on $timestamp" &gt; /private/var/tmp/$plistLabel.log
+
+# Exit
+
+echo "LaunchDaemon and Script created."
+
+exit 0</script_contents>
+    <script_contents_encoded>IyEvYmluL2Jhc2gKCiMgQ3JlYXRlcyBhIExhdW5jaERhZW1vbiBhbmQgc2NyaXB0IHRvIHJ1biBhIEphbWYgUmVjb24KIyBhdCBuZXh0IHJlYm9vdC4gKEJhc2VkIG9uIHNjcmlwdCBieSBAZGFuLXNuZWxzb24pCiMKIyBDcmVhdGVkIDA4LjI5LjIwMjIgQHJvYmpzY2hyb2VkZXIK77u/CiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCiMgVmFyaWFibGVzIC0tIGVkaXQgYXMgbmVlZGVkCgpzY3JpcHRWZXJzaW9uPSIxLjAiCnBsaXN0RG9tYWluPSIkNCIKcGxpc3RMYWJlbD0iJDUiCnBsaXN0TGFiZWw9IiRwbGlzdERvbWFpbi4kcGxpc3RMYWJlbCIKdGltZXN0YW1wPSQoIC9iaW4vZGF0ZSAnKyVZLSVtLSVkLSVIJU0lUycgKQoKIwojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwoKZWNobyAiUmVjb24gYXQgUmVib290ICgke3NjcmlwdFZlcnNpb259KSIKCmVjaG8gIkNyZWF0ZSB0aGUgTGF1bmNoRGFlbW9uIC4uLiIKCi9iaW4vZWNobyAiPD94bWwgdmVyc2lvbj1cIjEuMFwiIGVuY29kaW5nPVwiVVRGLThcIj8+CjwhRE9DVFlQRSBwbGlzdCBQVUJMSUMgXCItLy9BcHBsZS8vRFREIFBMSVNUIDEuMC8vRU5cIiBcImh0dHA6Ly93d3cuYXBwbGUuY29tL0RURHMvUHJvcGVydHlMaXN0LTEuMC5kdGRcIj4KPHBsaXN0IHZlcnNpb249XCIxLjBcIj4KICAgIDxkaWN0PgogICAgICAgIDxrZXk+TGFiZWw8L2tleT4KICAgICAgICA8c3RyaW5nPiR7cGxpc3RMYWJlbH08L3N0cmluZz4KICAgICAgICA8a2V5PlByb2dyYW1Bcmd1bWVudHM8L2tleT4KICAgICAgICA8YXJyYXk+CiAgICAgICAgICAgIDxzdHJpbmc+L2Jpbi9zaDwvc3RyaW5nPgogICAgICAgICAgICA8c3RyaW5nPi9wcml2YXRlL3Zhci90bXAvcmVjb25BdFJlYm9vdC5iYXNoPC9zdHJpbmc+CiAgICAgICAgPC9hcnJheT4KICAgICAgICA8a2V5PlJ1bkF0TG9hZDwva2V5PgogICAgICAgIDx0cnVlLz4KICAgIDwvZGljdD4KPC9wbGlzdD4iID4gL0xpYnJhcnkvTGF1bmNoRGFlbW9ucy8kcGxpc3RMYWJlbC5wbGlzdAoKZWNobyAiU2V0IExhdW5jaERhZW1vbiBmaWxlIHBlcm1pc3Npb25zIC4uLiIKCi91c3Ivc2Jpbi9jaG93biByb290OndoZWVsIC9MaWJyYXJ5L0xhdW5jaERhZW1vbnMvJHBsaXN0TGFiZWwucGxpc3QKL2Jpbi9jaG1vZCA2NDQgL0xpYnJhcnkvTGF1bmNoRGFlbW9ucy8kcGxpc3RMYWJlbC5wbGlzdAovYmluL2NobW9kICt4IC9MaWJyYXJ5L0xhdW5jaERhZW1vbnMvJHBsaXN0TGFiZWwucGxpc3QKCmVjaG8gIkNyZWF0ZSByZWJvb3Qgc2NyaXB0IC4uLiIKCmNhdCA8PCAnPT1lbmRPZlNjcmlwdD09JyA+IC9wcml2YXRlL3Zhci90bXAvcmVjb25BdFJlYm9vdC5iYXNoCiMhL2Jpbi9iYXNoCgojIFJ1biBKYW1mIFJlY29uIGF0IHJlYm9vdAojCiMgQ3JlYXRlZCAwOC4yOS4yMDIyIEByb2Jqc2Nocm9lZGVyCu+7vwojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwojIFZhcmlhYmxlcyAtLSBlZGl0IGFzIG5lZWRlZAoKc2NyaXB0VmVyc2lvbj0iMS4wIgpwbGlzdERvbWFpbj0iJDQiCnBsaXN0TGFiZWw9IiQ1IgpwbGlzdExhYmVsPSIkcGxpc3REb21haW4uJHBsaXN0TGFiZWwiCnRpbWVzdGFtcD0kKCAvYmluL2RhdGUgJyslWS0lbS0lZC0lSCVNJVMnICkKc2NyaXB0UmVzdWx0PSIiCgojCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCiMgRnVuY3Rpb25zIC0tIGRvIG5vdCBlZGl0IGJlbG93IGhlcmUKCmpzc0Nvbm5lY3Rpb25TdGF0dXMgKCkgewoKICAgIHNjcmlwdFJlc3VsdCs9IkNoZWNrIGZvciBKYW1mIFBybyBzZXJ2ZXIgY29ubmVjdGlvbjsgIgoKICAgIHVuc2V0IGpzc1N0YXR1cwogICAganNzU3RhdHVzPSQoIC91c3IvbG9jYWwvYmluL2phbWYgY2hlY2tKU1NDb25uZWN0aW9uIDI+JjEgfCAvdXNyL2Jpbi90ciAtZCAnXG4nICkKCiAgICBjYXNlICIke2pzc1N0YXR1c30iIGluCgogICAgICAgICoiVGhlIEpTUyBpcyBhdmFpbGFibGUuIiAgICAgICAgKSAgIGpzc0F2YWlsYWJsZT0ieWVzIiA7OwogICAgICAgICoiTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeSIgICAgKSAgIGpzc0F2YWlsYWJsZT0ibm90IGluc3RhbGxlZCIgOzsKICAgICAgICAqICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICkgICBqc3NBdmFpbGFibGU9InVua25vd24iIDs7CgogICAgZXNhYwoKfQoKZWNobyAiU3RhcnRpbmcgUmVjb24gYXQgUmVib290ICgke3NjcmlwdFZlcnNpb259KSBhdCAkdGltZXN0YW1wIiA+PiAvcHJpdmF0ZS92YXIvdG1wLyRwbGlzdExhYmVsLmxvZwoKIyBIYXJkLWNvZGVkIHNsZWVwIG9mIDI1IHNlY29uZHMgZm9yIGF1dG8tbGF1bmNoZWQgYXBwbGljYXRpb25zIHRvIHN0YXJ0CnNsZWVwICIyNSIKCmpzc0Nvbm5lY3Rpb25TdGF0dXMKCmNvdW50ZXI9MQoKdW50aWwgW1sgIiR7anNzQXZhaWxhYmxlfSIgPT0gInllcyIgXV0gfHwgW1sgIiR7Y291bnRlcn0iIC1ndCAiMTAiIF1dOyBkbwogICAgc2NyaXB0UmVzdWx0Kz0iQ2hlY2sgJHtjb3VudGVyfSBvZiAxMDogSmFtZiBQcm8gc2VydmVyIE5PVCByZWFjaGFibGU7IHdhaXRpbmcgdG8gcmUtY2hlY2s7ICIKICAgIHNsZWVwICIzMCIKICAgIGpzc0Nvbm5lY3Rpb25TdGF0dXMKICAgICgoY291bnRlcisrKSkKZG9uZQoKaWYgW1sgIiR7anNzQXZhaWxhYmxlfSIgPT0gInllcyIgXV07IHRoZW4KCiAgICBlY2hvICJKYW1mIFBybyBzZXJ2ZXIgaXMgYXZhaWxhYmxlLCBwcm9jZWVkaW5nOyAiID4+IC9wcml2YXRlL3Zhci90bXAvJHBsaXN0TGFiZWwubG9nCgogICAgc2NyaXB0UmVzdWx0Kz0iUmVzdW1pbmcgUmVjb24gYXQgUmVib290OyAiCgogICAgc2NyaXB0UmVzdWx0Kz0iVXBkYXRpbmcgaW52ZW50b3J5OyAiCgogICAgL3Vzci9sb2NhbC9iaW4vamFtZiByZWNvbgoKZWxzZQoKICAgIHNjcmlwdFJlc3VsdCs9IkphbWYgUHJvIHNlcnZlciBpcyBOT1QgYXZhaWxhYmxlOyBleGl0aW5nLiIKCmZpCgojIERlbGV0ZSBsYXVuY2hkIHBsaXN0CgpzY3JpcHRSZXN1bHQrPSJEZWxldGUgJHBsaXN0TGFiZWwucGxpc3Q7ICIKL2Jpbi9ybSAtZnYgL0xpYnJhcnkvTGF1bmNoRGFlbW9ucy8kcGxpc3RMYWJlbC5wbGlzdAoKIyBEZWxldGUgc2NyaXB0CgpzY3JpcHRSZXN1bHQrPSJEZWxldGUgc2NyaXB0OyAiCi9iaW4vcm0gLWZ2IC9wcml2YXRlL3Zhci90bXAvcmVjb25BdFJlYm9vdC5iYXNoCgojIEV4aXQKCnNjcmlwdFJlc3VsdCs9IkVuZC1vZi1saW5lLiIKCmVjaG8gIiR7c2NyaXB0UmVzdWx0fSIgPj4gL3ByaXZhdGUvdmFyL3RtcC8kcGxpc3RMYWJlbC5sb2cKCmV4aXQgMAo9PWVuZE9mU2NyaXB0PT0KCmVjaG8gIlNldCBzY3JpcHQgZmlsZSBwZXJtaXNzaW9ucyAuLi4iCi91c3Ivc2Jpbi9jaG93biByb290OndoZWVsIC9wcml2YXRlL3Zhci90bXAvcmVjb25BdFJlYm9vdC5iYXNoCi9iaW4vY2htb2QgNjQ0IC9wcml2YXRlL3Zhci90bXAvcmVjb25BdFJlYm9vdC5iYXNoCi9iaW4vY2htb2QgK3ggL3ByaXZhdGUvdmFyL3RtcC9yZWNvbkF0UmVib290LmJhc2gKCmVjaG8gIkNyZWF0ZSBMb2cgRmlsZSBhdCAvcHJpdmF0ZS92YXIvdG1wLyRwbGlzdExhYmVsLmxvZyAuLi4iCnRvdWNoIC9wcml2YXRlL3Zhci90bXAvJHBsaXN0TGFiZWwubG9nCmVjaG8gIkNyZWF0ZWQgJHBsaXN0TGFiZWwubG9nIG9uICR0aW1lc3RhbXAiID4gL3ByaXZhdGUvdmFyL3RtcC8kcGxpc3RMYWJlbC5sb2cKCiMgRXhpdAoKZWNobyAiTGF1bmNoRGFlbW9uIGFuZCBTY3JpcHQgY3JlYXRlZC4iCgpleGl0IDA=</script_contents_encoded>
+</script>

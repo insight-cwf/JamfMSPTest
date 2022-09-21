@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<computer_extension_attribute>
+    <name>Network Quality</name>
+    <enabled>true</enabled>
+    <description>A script to determine the network quality of the Mac's Internet connection</description>
+    <data_type>String</data_type>
+    <input_type>
+        <type>script</type>
+        <platform>Mac</platform>
+        <script>#!/bin/sh
+        
+# A script to determine the network quality of the Mac's Internet connection. #
+
+osProductVersion=$( /usr/bin/sw_vers -productVersion )
+
+case "${osProductVersion}" in
+
+    10* | 11* )
+        echo "&lt;result&gt;N/A; macOS ${osProductVersion}&lt;/result&gt;"
+        ;;
+
+    12* )
+        networkQualityTest=$( /usr/bin/networkQuality -s -v )
+        downloadCapacity=$( echo "${networkQualityTest}" | /usr/bin/awk '/Download capacity:/{print $3, $4}' )
+        downloadResponsiveness=$( echo "${networkQualityTest}" | /usr/bin/awk '/Download Responsiveness:/{print $3, $4, $5}' )
+        echo "&lt;result&gt;${downloadCapacity} | ${downloadResponsiveness}&lt;/result&gt;"
+        ;;
+
+    13* )
+        networkQualityTest=$( /usr/bin/networkQuality -s -v )
+        downlinkCapacity=$( echo "${networkQualityTest}" | /usr/bin/awk '/Downlink capacity:/{print $3, $4}' )
+        downlinkResponsiveness=$( echo "${networkQualityTest}" | /usr/bin/awk '/Downlink Responsiveness:/{print $3, $4, $5}' )
+        echo "&lt;result&gt;${downlinkCapacity} | ${downlinkResponsiveness}&lt;/result&gt;"
+        ;;
+
+esac
+
+exit 0</script>
+    </input_type>
+    <inventory_display>Extension Attributes</inventory_display>
+    <recon_display>Extension Attributes</recon_display>
+</computer_extension_attribute>
